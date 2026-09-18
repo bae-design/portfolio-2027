@@ -5,23 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Missing — Suhee</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="./index.html">Suhee <span>Vol. 2027</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a href="./work.html">Work</a>
-      <a href="./about.html">About</a>
-    </nav>
+    <a class="brand" href="./index.html" aria-label="Suhee home">S</a>
+    <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+    </button>
   </header>
-  <main class="wrap page-hero">
-    <p class="kicker"><span>404</span><span>Off the map</span></p>
-    <h1>This page isn’t in the issue.</h1>
-    <p style="margin-top:1.5rem"><a href="./index.html">Return to the cover.</a></p>
+  <nav class="overlay" id="menu" data-menu hidden>
+    <a href="./index.html">Home</a>
+    <a href="./work.html">Work</a>
+    <a href="./about.html">About</a>
+  </nav>
+  <main class="hero">
+    <p class="label"><i></i> 404</p>
+    <h1 class="display">Off the<br>map</h1>
+    <p class="hero-copy"><a href="./index.html">Return to the cover →</a></p>
   </main>
+  <script src="./js/main.js"></script>
 </body>
 </html>

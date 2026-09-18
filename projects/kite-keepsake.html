@@ -6,26 +6,33 @@
   <title>Kite &amp; Keepsake — Suhee</title>
   <meta name="description" content="Inventory and crafting UI for a cozy adventure.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+  <div class="cursor" data-cursor hidden></div>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="../index.html">Suhee <span>Vol. 2027</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a href="../work.html" aria-current="page">Work</a>
-      <a href="../about.html">About</a>
-      <a class="mail" href="mailto:hello@example.com">Email</a>
-    </nav>
+    <a class="brand" href="../index.html" aria-label="Suhee home">S</a>
+    <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+    </button>
   </header>
+  <nav class="overlay" id="menu" data-menu hidden>
+    <a href="../index.html">Home</a>
+    <a href="../work.html">Work</a>
+    <a href="../about.html">About</a>
+    <a href="mailto:hello@example.com">Email</a>
+  </nav>
 
   <main id="main" class="wrap">
     <header class="page-hero">
-      <p class="kicker"><span>02</span><span>Cozy adventure / hybrid</span></p>
-      <h1>Kite &amp; Keepsake</h1>
+      <p class="label"><i></i> 02 — Cozy adventure / hybrid</p>
+      <h1 class="display">Kite &amp;<br>Keepsake</h1>
     </header>
 
     <div class="case-meta">
@@ -50,7 +57,7 @@
           <div class="slot"></div>
           <div class="slot on"></div>
         </div>
-        <div class="prompt" style="color:#161410;border-color:rgba(22,20,16,.35)">Craft — reed whistle</div>
+        <div class="prompt">Craft — reed whistle</div>
       </div>
       <figcaption>Frame 2 — inventory as objects in a tray. Swap in your painted icons and real item names.</figcaption>
     </figure>
@@ -62,7 +69,7 @@
       </div>
       <div>
         <h2>Approach</h2>
-        <p>Items are silhouettes first, stats second. Crafting is a short sentence (“reed + twine”) pinned to the bottom edge, so the grid never competes with the action. Empty cells stay empty — no ghost icons, no noise.</p>
+        <p>Items are silhouettes first, stats second. Crafting is a short sentence pinned to the bottom edge, so the grid never competes with the action. Empty cells stay empty — no ghost icons, no noise.</p>
       </div>
     </div>
 

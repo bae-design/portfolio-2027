@@ -4,102 +4,166 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Suhee — Game UX / UI</title>
-  <meta name="description" content="Editorial portfolio of game UX and UI design: HUD systems, inventory, and first-session onboarding.">
+  <meta name="description" content="Game UX and UI design: HUD systems, inventory, and first-session onboarding.">
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+  <div class="cursor" data-cursor hidden></div>
   <a class="skip" href="#work">Skip to selected work</a>
   <header class="site-header">
-    <a class="brand" href="./index.html">Suhee <span>Vol. 2027</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a href="./work.html">Work</a>
-      <a href="./about.html">About</a>
-      <a class="mail" href="mailto:hello@example.com">Email</a>
-    </nav>
+    <a class="brand" href="./index.html" aria-label="Suhee home">S</a>
+    <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+    </button>
   </header>
+  <nav class="overlay" id="menu" data-menu hidden>
+    <a href="./index.html">Home</a>
+    <a href="./work.html">Work</a>
+    <a href="./about.html">About</a>
+    <a href="mailto:hello@example.com">Email</a>
+  </nav>
 
   <main>
-    <section class="hero wrap">
-      <p class="kicker"><span>Game UX / UI</span><span>Issue 01</span></p>
-      <h1>Suhee</h1>
-      <div class="lede">
-        <p>Interface systems for play — readable under pressure, quiet when they should be.</p>
-        <p class="meta">Independent designer working with studios on HUD language, menu architecture, and the first hour in-world.</p>
+    <section class="hero">
+      <p class="label"><i></i> Suhee — game ux / ui</p>
+      <h1 class="display">
+        I design<br>
+        interfaces<br>
+        for<br>
+        <em>play</em>
+      </h1>
+      <p class="hero-copy">HUD systems, menus, and first hours for games that have to stay readable under pressure — and disappear when the player is in flow.</p>
+    </section>
+
+    <section class="manifesto wrap">
+      <p class="label"><i></i> Manifesto</p>
+      <p class="mani-type">
+        <b>For games that</b>
+        have to be read
+        <em>under fire</em> —
+        <b>quiet when they</b>
+        should be.
+      </p>
+    </section>
+
+    <section id="work">
+      <a class="work-panel" href="./projects/ash-protocol.html">
+        <div class="hud hud-corners">
+          <span></span>
+          <div class="hud-row">
+            <div class="bars">
+              <div class="bar spot"><i style="width:62%"></i></div>
+              <div class="bar"><i style="width:40%"></i></div>
+            </div>
+            <span>Sector 7-K</span>
+          </div>
+          <div class="compass">N · NE · E</div>
+          <div class="minimap"><div class="dot"></div></div>
+        </div>
+        <h2 class="title">Ash</h2>
+        <span class="work-index"><b>01</b> / 03</span>
+      </a>
+      <a class="work-panel" href="./projects/kite-keepsake.html">
+        <div class="hud kite">
+          <div class="hud-row"><span>Satchel</span><span>12 / 24</span></div>
+          <div class="slots">
+            <div class="slot on"></div>
+            <div class="slot on"></div>
+            <div class="slot"></div>
+            <div class="slot on"></div>
+          </div>
+        </div>
+        <h2 class="title">Kite</h2>
+        <span class="work-index"><b>02</b> / 03</span>
+      </a>
+      <a class="work-panel" href="./projects/wake-cycle.html">
+        <div class="hud wake hud-corners">
+          <span></span>
+          <div class="compass">Hold to listen</div>
+          <div class="prompt">Cross the threshold</div>
+        </div>
+        <h2 class="title">Wake</h2>
+        <span class="work-index"><b>03</b> / 03</span>
+      </a>
+    </section>
+
+    <div class="stairs" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <section class="light about-block" id="about">
+      <div class="wrap">
+        <p class="label"><i></i> About</p>
+        <h2 class="display">Design with<br>real play.</h2>
+        <div class="about-grid">
+          <div class="prose">
+            <p class="lede">I'm Suhee, a game UX / UI designer. Most of the work starts in playtests, not in Figma — mapping intent, then deciding if the answer belongs in the world, in chrome, or nowhere.</p>
+            <a class="more" href="./about.html">More about me →</a>
+          </div>
+          <p>Studios hire me for HUD language, menu architecture, and the first hour in-world. The three studies here are stand-ins until you drop in shipped, NDA-safe frames.</p>
+        </div>
       </div>
     </section>
 
-    <section id="work" class="wrap">
-      <div class="section-head">
-        <span>Selected work</span>
-        <span>03 studies</span>
-      </div>
-      <ol class="contents">
-        <li>
-          <a href="./projects/ash-protocol.html" data-preview-src="ash">
+    <section class="light services" id="services">
+      <div class="wrap">
+        <p class="label"><i></i> What I do</p>
+        <h2 class="display">What I actually do.</h2>
+        <div class="acc">
+          <button type="button" data-acc aria-expanded="true" aria-controls="acc-1">
             <span class="num">01</span>
-            <span class="title">Ash Protocol</span>
-            <span class="role">HUD &amp; threat language</span>
-            <span class="year">2026</span>
-          </a>
-        </li>
-        <li>
-          <a href="./projects/kite-keepsake.html" data-preview-src="kite">
+            <span class="name">HUD &amp; threat</span>
+            <span class="code">UX-01</span>
+          </button>
+          <div class="panel" id="acc-1">Combat chrome that scales with actual danger. Persistent vitals stay small; fatal timers get type, not another icon family.</div>
+        </div>
+        <div class="acc">
+          <button type="button" data-acc aria-expanded="false" aria-controls="acc-2">
             <span class="num">02</span>
-            <span class="title">Kite &amp; Keepsake</span>
-            <span class="role">Inventory &amp; crafting</span>
-            <span class="year">2025</span>
-          </a>
-        </li>
-        <li>
-          <a href="./projects/wake-cycle.html" data-preview-src="wake">
+            <span class="name">Menus &amp; systems</span>
+            <span class="code">UI-02</span>
+          </button>
+          <div class="panel" id="acc-2" hidden>Inventory, crafting, loadouts — readable on pad and handheld. Empty cells stay empty.</div>
+        </div>
+        <div class="acc">
+          <button type="button" data-acc aria-expanded="false" aria-controls="acc-3">
             <span class="num">03</span>
-            <span class="title">Wake Cycle</span>
-            <span class="role">First-session onboarding</span>
-            <span class="year">2025</span>
-          </a>
-        </li>
-      </ol>
+            <span class="name">First session</span>
+            <span class="code">ON-03</span>
+          </button>
+          <div class="panel" id="acc-3" hidden>Onboarding with no slideshow. The room teaches the verb; the UI only confirms it.</div>
+        </div>
+        <div class="acc">
+          <button type="button" data-acc aria-expanded="false" aria-controls="acc-4">
+            <span class="num">04</span>
+            <span class="name">With engineering</span>
+            <span class="code">EN-04</span>
+          </button>
+          <div class="panel" id="acc-4" hidden>UMG / Unity UI budgets, localization overflow, colorblind combat language, and input that works on mouse, pad, and touch.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stairs invert" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <section class="cta wrap">
+      <p class="label"><i></i> Contact</p>
+      <p>Got something in production?</p>
+      <a class="talk" href="mailto:hello@example.com">Let's talk Let's talk</a>
     </section>
   </main>
 
-  <aside class="preview-dock" data-preview aria-hidden="true">
-    <div class="preview-frame" data-preview-stage>
-      <div data-hud="ash" class="hud hud-corners">
-        <span></span>
-        <div class="hud-row">
-          <div class="bars">
-            <div class="bar spot"><i style="width:62%"></i></div>
-            <div class="bar"><i style="width:40%"></i></div>
-          </div>
-          <span>Sector 7-K</span>
-        </div>
-        <div class="compass">N · NE · E</div>
-        <div class="minimap"><div class="dot"></div></div>
-      </div>
-      <div data-hud="kite" class="hud kite">
-        <div class="hud-row"><span>Satchel</span><span>12 / 24</span></div>
-        <div class="slots">
-          <div class="slot on"></div>
-          <div class="slot on"></div>
-          <div class="slot"></div>
-          <div class="slot on"></div>
-        </div>
-      </div>
-      <div data-hud="wake" class="hud wake hud-corners">
-        <span></span>
-        <div class="compass">Hold to listen</div>
-        <div class="prompt">Cross the threshold</div>
-      </div>
-    </div>
-  </aside>
-
   <footer class="site-footer">
     <span>© <span data-year>2026</span> Suhee</span>
-    <a href="mailto:hello@example.com">Available for collaborations</a>
+    <a href="mailto:hello@example.com">hello@example.com</a>
   </footer>
   <script src="./js/main.js"></script>
 </body>
