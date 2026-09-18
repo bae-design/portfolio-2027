@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kite &amp; Keepsake — Suhee</title>
+  <meta name="description" content="Inventory and crafting UI for a cozy adventure.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html">Suhee <span>Vol. 2027</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="../work.html" aria-current="page">Work</a>
+      <a href="../about.html">About</a>
+      <a class="mail" href="mailto:hello@example.com">Email</a>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <header class="page-hero">
+      <p class="kicker"><span>02</span><span>Cozy adventure / hybrid</span></p>
+      <h1>Kite &amp; Keepsake</h1>
+    </header>
+
+    <div class="case-meta">
+      <div><small>Role</small><p>UI / menu architecture</p></div>
+      <div><small>Year</small><p>2025</p></div>
+      <div><small>With</small><p>Design &amp; narrative</p></div>
+      <div><small>Output</small><p>Inventory kit, recipes</p></div>
+    </div>
+
+    <p class="pull">A satchel should feel like a kitchen drawer: you know where the good knife lives without counting slots.</p>
+
+    <figure class="figure">
+      <div class="hud kite" style="min-height:28rem">
+        <div class="hud-row"><span>Satchel</span><span>Field kit · 12 / 24</span></div>
+        <div class="slots" style="margin-top:3rem">
+          <div class="slot on"></div>
+          <div class="slot on"></div>
+          <div class="slot"></div>
+          <div class="slot on"></div>
+          <div class="slot on"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot on"></div>
+        </div>
+        <div class="prompt" style="color:#161410;border-color:rgba(22,20,16,.35)">Craft — reed whistle</div>
+      </div>
+      <figcaption>Frame 2 — inventory as objects in a tray. Swap in your painted icons and real item names.</figcaption>
+    </figure>
+
+    <div class="split-notes prose">
+      <div>
+        <h2>Problem</h2>
+        <p>Early grids read as an MMO leftover: grey cells, rarity borders, tooltips that blocked the recipe. Handheld testers could not tell a keepsake from a material at a glance.</p>
+      </div>
+      <div>
+        <h2>Approach</h2>
+        <p>Items are silhouettes first, stats second. Crafting is a short sentence (“reed + twine”) pinned to the bottom edge, so the grid never competes with the action. Empty cells stay empty — no ghost icons, no noise.</p>
+      </div>
+    </div>
+
+    <a class="next-case" href="./wake-cycle.html">
+      <span>Next study</span>
+      <strong>Wake Cycle</strong>
+    </a>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span data-year>2026</span> Suhee</span>
+    <a href="../work.html">All work</a>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
